@@ -1,52 +1,14 @@
-.header.header-transparent {
-    background: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+body {
+    font-family: Arvo, serif;
+    background: url(/images/image1.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.header, .header.header-small {
-    background: #fff;
-    border-bottom: 1px solid rgba(240, 240, 240, .8);
-}
-.header {
-    position: fixed;
-    height: 74px;
-    width: 100%;
-    transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
-    transform: translate3d(0, 0, 0);
-    z-index: 1040;
-}
-@media (min-width: 992px)
-.inner-navigation.collapse {
-    display: block;
-}
-.collapse:not(.show) {
-    display: none;
-}
-.inner-navigation {
-    position: absolute;
-    height: 100%;
-    float: left;
-    right: 15px;
-    left: 15px;
-    text-align: center;
-}
-.header .container-fluid {
-    position: relative;
-    height: 100%;
-}
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-page-loader {
-    background: #fff;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    opacity: 1;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    margin-top: 50%;
 }
