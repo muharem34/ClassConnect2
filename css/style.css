@@ -1,28 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
 body{
     overflow: hidden;
     font-family: 'Lato', sans-serif;
-    color: #505962; /*gray color*/
-
-
+    color: #505962;
 }
 
 /* Navigation */
 .navbar{
     text-transform: uppercase; /*li contents are all uppercase*/
     font-weight: 700;
-    font-size: 0.9rem;  /* 1rem = 16px*/
+    font-size: 1rem;  /* 1rem = 16px*/
     letter-spacing: .1rem;
     background: rgba(0, 0, 0, 0.6)!important; /*!importat overrides .navbar style for background color, remove this and u can see*/
 
 }
-.navbar-brand{
+.navbar-brand img{ /*need to add a logo img for brand*/
     height: 2rem;
+}
+.navbar-nav li{
+    padding-right: 0.7rem;
+
+}
+.navbar-dark .navbar-nav .navbar-link{
+    color: white;
+    padding-top: 0.8rem;
+}
+.navbar-dark .navbar-nav .navbar-link:active
+.navbar-dark .navbar-nav .navbar-link:hover{
+    color: #1ebba3;
+
 }
 
 
-
-/* Landing Page Section
-.landing {
+ /* Landing Page Section */
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+    padding: 1rem;
+  }
+  
+  /*--- Bootstrap Mobile Gutter Fix --*/
+  .row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+  }
+  
+  /*--- Fix for Fixed Navbar jumping on scroll --*/
+  .fixed-top  {
+   -webkit-backface-visibility: hidden;
+  }
+  
+  /*--- Fixed Landing Page Section --*/
+  .landing {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -38,6 +69,7 @@ body{
     height: 100%;
   }
   .home-inner {
+    background-image: url(/images/computers.png);
     position: fixed;
     display: table;
     top: 0;
@@ -49,4 +81,33 @@ body{
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     will-change: transform;
-  } */
+  }
+  
+  /*--- iOS Fixed Background Image --*/
+  .fixed-background {
+    position: relative;
+    width: 100%;
+  }
+  .fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999!important;
+  }
+  .fixed {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+  }
+  
